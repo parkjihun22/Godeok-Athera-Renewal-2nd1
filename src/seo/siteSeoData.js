@@ -147,7 +147,7 @@ const page = ({
 export const seoPages = {
   home: page({
     path: "/",
-    title: "고덕신도시 아테라 | 평택 고덕 A-63BL 630세대",
+    title: "고덕신도시 아테라",
     description: siteSeo.defaultDescription,
     menu: "홈",
     priority: 1,
