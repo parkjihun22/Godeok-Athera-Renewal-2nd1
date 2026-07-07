@@ -9,7 +9,7 @@ export const siteSeo = {
   organizationId: `${SITE_URL}/#organization`,
   websiteId: `${SITE_URL}/#website`,
 
-  defaultTitle: "고덕신도시 아테라 | 평택 고덕 A-63BL 630세대",
+  defaultTitle: "고덕신도시 아테라",
 
   defaultDescription:
     "고덕신도시 아테라 공식 홈페이지입니다. 경기도 평택시 평택고덕국제화계획지구 A-63BL에 공급되는 총 630세대 프리미엄 브랜드 아파트로, 전용 74㎡A·74㎡B·84㎡A·84㎡B·84㎡C 타입, 사업안내, 입지환경, 공급정보, 청약정보, 분양가 상담, 견본주택과 모델하우스 방문예약 정보를 안내합니다.",
