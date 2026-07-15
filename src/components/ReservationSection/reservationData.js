@@ -9,7 +9,7 @@ const reservationData = {
   notice:
     "방문 전 관심 평형과 상담 희망 내용을 남겨주시면 74㎡·84㎡ 타입 비교, 청약 일정, 분양가 및 계약 조건까지 보다 정확하게 안내해드립니다.",
 
-  formAction: "https://formspree.io/f/mredqegy",
+  formAction: "https://formspree.io/f/xdaqadvq",
 
   points: [
     {
