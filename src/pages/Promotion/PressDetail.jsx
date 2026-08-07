@@ -94,13 +94,13 @@ export default function PressDetail() {
         if (snap.exists()) {
           const data = snap.data();
           if (!data.siteId || data.siteId === site) {
-            await updateDoc(ref, { views: increment(1) });
             setArticle({
               id: snap.id,
               source: defaultPressSource,
               label: "언론보도",
               ...data,
             });
+            updateDoc(ref, { views: increment(1) }).catch(() => {});
             return;
           }
         }
@@ -117,15 +117,15 @@ export default function PressDetail() {
 
         if (slugDoc) {
           const data = slugDoc.data();
-          await updateDoc(doc(db, pressCollectionName, slugDoc.id), {
-            views: increment(1),
-          });
           setArticle({
             id: slugDoc.id,
             source: defaultPressSource,
             label: "언론보도",
             ...data,
           });
+          updateDoc(doc(db, pressCollectionName, slugDoc.id), {
+            views: increment(1),
+          }).catch(() => {});
           return;
         }
       } catch {
