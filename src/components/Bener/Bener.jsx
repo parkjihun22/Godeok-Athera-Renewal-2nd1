@@ -125,5 +125,19 @@ const contents = (text, isLoaded) => {
         </div>
       </>
     );
-  };
+  } else if (promotionTitles.includes(normalizedText)) {
+    return (
+      <>
+        <div className={`${styles.text} ${isLoaded ? styles.showText : ""}`}>
+          고덕신도시 아테라의 분양 소식과 공식 보도자료를 안내합니다.
+        </div>
+
+        <div className={`${styles.text} ${isLoaded ? styles.showText : ""}`}>
+          공급정보, 청약 일정, 모델하우스 방문예약 관련 최신 소식을 확인하세요.
+        </div>
+      </>
+    );
+  }
+
+  return null;
 };

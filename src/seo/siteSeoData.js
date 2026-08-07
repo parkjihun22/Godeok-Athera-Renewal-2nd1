@@ -40,6 +40,9 @@ export const siteSeo = {
     "고덕신도시 아테라 분양가",
     "고덕신도시 아테라 모집공고",
     "고덕신도시 아테라 공급안내",
+    "고덕신도시 아테라 언론보도",
+    "고덕신도시 아테라 보도자료",
+    "고덕신도시 아테라 뉴스",
     "고덕신도시 아테라 모델하우스",
     "고덕신도시 아테라 견본주택",
     "고덕신도시 아테라 방문예약",
@@ -106,8 +109,9 @@ export const seoNavigation = [
   },
   {
     name: "홍보센터",
-    path: "/Promotion/Customer",
+    path: "/Promotion/Press",
     children: [
+      { name: "언론보도", path: "/Promotion/Press" },
       { name: "관심고객등록", path: "/Promotion/Customer" },
     ],
   },
@@ -309,6 +313,17 @@ export const seoPages = {
     changefreq: "daily",
   }),
 
+  press: page({
+    path: "/Promotion/Press",
+    title: "언론보도 | 고덕신도시 아테라",
+    description:
+      "고덕신도시 아테라 언론보도 페이지입니다. 평택 고덕국제신도시 A-63BL 공급 정보, 청약, 입지환경, 모델하우스 방문예약 관련 공식 보도자료와 분양 소식을 확인하세요.",
+    menu: "홍보센터",
+    image: "/img/og/main.jpg",
+    priority: 0.9,
+    changefreq: "daily",
+  }),
+
   notFound: page({
     path: "/404",
     title: "페이지를 찾을 수 없습니다 | 고덕신도시 아테라",
@@ -365,6 +380,8 @@ export const getSeoPageByPath = (pathname = "/") => {
 
   if (exactKey) return seoPages[exactKey];
 
+  if (normalizedPath.endsWith("/press")) return seoPages.press;
+  if (normalizedPath.includes("/promotion/press")) return seoPages.press;
   if (normalizedPath.endsWith("/customer")) return seoPages.customer;
   if (normalizedPath.includes("/promotion/customer")) return seoPages.customer;
 
